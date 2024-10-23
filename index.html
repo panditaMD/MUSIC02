@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Buscador local de musica</title>
+</head>
+<body>
+  <div class="buscador">
+        <input type="text" id="searchInput" placeholder="Buscar música..." />
+        <button id="searchButton">Buscar</button>
+        <div id="suggestion-box"></div>
+    </div>
+
+    <div class="container contenido">
+        <h1>Buscador de Música</h1>
+        <div id="alertMessage" style="color: red; margin-bottom: 2px;">
+            <strong>¡Atención!</strong> Este sitio web es solo de referencia y no implica normas o regulaciones. No todas las músicas son gratis. Por este motivo, elige (enlista) solo los nombres y descarga la lista para enviarla al proveedor.
+        </div>
+        
+        <!-- Resultados de búsqueda -->
+        <div class="results" id="resultsContainer">
+            <div class="result-item">
+                <div class="videoPlayerWrapper">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="buttons">
+                    <button class="play-button">Reproducir</button>
+                    <button class="enlist-button">Enlistar</button>
+                </div>
+            </div>
+            <!-- Agregar más resultados aquí -->
+        </div>
+        
+        <!-- Lista de videos seleccionados -->
+        <div class="selected-videos" id="selectedVideosContainer">
+            <h2>Videos Seleccionados</h2>
+            <ul id="selectedVideosList"></ul>
+            <button id="exportButton">Exportar a TXT</button>
+        </div>
+
+        <footer>
+            <p>
+                © Derechos de autor reservados. Creado por DarWiNDowlosads.
+            </p>
+        </footer>
+    </div>
+
+    <!-- Reproductor de video 1x1 -->
+    <div id="videoPlayer"></div>
+
+    <div id="audio-player" style="display: none;">
+        <audio id="audio" controls>
+            <source id="audio-source" src="" type="audio/mpeg">
+            Tu navegador no soporta audio HTML5.
+        </audio>
+    </div>
+
+    <script src="Functions.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+</body>
+</html>
